@@ -1,0 +1,9 @@
+if(sender instanceof Player){
+    Player player = (Player) sender;
+    if(PermissionManager.hasPermission(sender, "inv")){
+        if(args.length==1){
+
+        }else{Error.wrongCMD(player);}//TODO:
+    }else{Error.noPermission(player);}
+}else{Error.noPlayer(sender);}
+return false;

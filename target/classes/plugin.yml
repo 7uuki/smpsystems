@@ -1,0 +1,22 @@
+name: smpsystems
+main: com.itkeller.Main
+version: 0.0.1
+api-version: 1.15
+description: Collection of important SMP-Server features
+
+commands:
+  color:
+    description: change the color of your name
+  deathcount:
+    description: lists how many deaths you have
+    aliases: [death,dc]
+  backpack:
+    aliases: [bp]
+    description: Opens your personal Backpack /settings to activate
+    usage: just execute the command
+  settings:
+  message:
+    aliases: [msg,tell]
+  perm:
+  inventory:
+    aliases: [inv]

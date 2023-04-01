@@ -1,0 +1,8 @@
+with those permissions you are allowed to do:
+
+settings
+    .see -> open settings-menu
+    .change -> to change the settings (in the settings-menu)
+backpack.open -> open bp-inv
+color -> change your displayname color
+deathcounter -> execute cmd

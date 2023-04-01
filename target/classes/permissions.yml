@@ -1,0 +1,14 @@
+groups:
+  player:
+    permissions:
+    - settings.open
+    - backpack.open
+    - color
+    - deathcounter
+  mod:
+    permissions:
+    - permissions
+    - settings
+    - inv
+    inheritance:
+    - player
