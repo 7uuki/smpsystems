@@ -1,19 +1,16 @@
 package com.itkeller.smpsystems.Utils.PlayerUtility;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Chat;
+import com.itkeller.smpsystems.Utils.Helper.Chat;
 
 import net.md_5.bungee.api.ChatColor;
 

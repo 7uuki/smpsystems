@@ -1,13 +1,12 @@
 package com.itkeller.smpsystems.Commands.SimpleCMDs;
 
-import org.bukkit.Statistic;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Error;
+import com.itkeller.smpsystems.Utils.Helper.Error;
 import com.itkeller.smpsystems.Utils.Permissions.PermissionManager;
 
 import net.md_5.bungee.api.ChatColor;

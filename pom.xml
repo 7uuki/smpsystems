@@ -7,7 +7,7 @@
 
 	<groupId>com.itkeller</groupId>
 	<artifactId>smpsystems</artifactId>
-	<version>0.0.4</version>
+	<version>1</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

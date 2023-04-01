@@ -1,8 +1,6 @@
 package com.itkeller.smpsystems.Utils.Permissions;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +10,7 @@ import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.YML;
+import com.itkeller.smpsystems.Utils.Helper.YML;
 import com.itkeller.smpsystems.Utils.PlayerUtility.PlayerStats;
 
 public class PermissionManager {

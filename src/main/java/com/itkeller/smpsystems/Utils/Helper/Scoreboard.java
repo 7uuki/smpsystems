@@ -1,7 +1,6 @@
-package com.itkeller.smpsystems.Utils;
+package com.itkeller.smpsystems.Utils.Helper;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;

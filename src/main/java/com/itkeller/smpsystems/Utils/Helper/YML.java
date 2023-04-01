@@ -1,26 +1,19 @@
-package com.itkeller.smpsystems.Utils;
+package com.itkeller.smpsystems.Utils.Helper;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
 
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.checkerframework.checker.units.qual.m;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Permissions.PermissionGroup;
 
 public class YML {
-    private static final ArrayList<Object> NullPointerException = null;
     private static String folder = Main.folder;
     private File file;
     private static FileConfiguration config;
@@ -43,14 +36,14 @@ public class YML {
             Main.LOGGER.info("ERROR: couldn't save"+File.listRoots().toString());
             e.printStackTrace();
         }       
-        Main.LOGGER.info(Main.prefix+"created new YML at: "+folder+ymlPath+".yml");
+        //Main.LOGGER.info(Main.prefix+"created new YML at: "+folder+ymlPath+".yml");
     }
     public YML(String path,String ymlname){
         this(path+"/"+ymlname);
     }
 
     public Object get(String key){
-        Main.LOGGER.info("get "+key);
+        //Main.LOGGER.info("get "+key);
         if(exsists){return config.get(key);}
         return null;
     }

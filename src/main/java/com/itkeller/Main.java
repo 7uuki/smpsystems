@@ -1,14 +1,9 @@
 package com.itkeller;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,17 +14,19 @@ import com.itkeller.smpsystems.Commands.SimpleCMDs.MsgCMD;
 import com.itkeller.smpsystems.Commands.Systems.BackPackCMD;
 import com.itkeller.smpsystems.Commands.Systems.ColorCMD;
 import com.itkeller.smpsystems.Commands.Systems.InvCMD;
+import com.itkeller.smpsystems.Commands.Systems.PositionCMD;
 import com.itkeller.smpsystems.Commands.Systems.SettingsCMD;
 import com.itkeller.smpsystems.Listener.ChatListener;
 import com.itkeller.smpsystems.Listener.JoinListener;
 import com.itkeller.smpsystems.Listener.PlayerDeathListener;
 import com.itkeller.smpsystems.Listener.QuitListener;
-import com.itkeller.smpsystems.Utils.Config;
-import com.itkeller.smpsystems.Utils.Scoreboard;
+import com.itkeller.smpsystems.Utils.Helper.Config;
+import com.itkeller.smpsystems.Utils.Helper.Scoreboard;
 import com.itkeller.smpsystems.Utils.Inventory.InventoryManager;
 import com.itkeller.smpsystems.Utils.MenuMaker.MenuListener;
 import com.itkeller.smpsystems.Utils.Permissions.PermissionManager;
 import com.itkeller.smpsystems.Utils.PlayerUtility.PlayerUtility;
+import com.itkeller.smpsystems.Utils.Position.PositionManager;
 
 
 /*
@@ -86,6 +83,10 @@ public class Main extends JavaPlugin
     getCommand("message").setExecutor(new MsgCMD());
     getCommand("perm").setExecutor(new PermissionCMD());
     getCommand("inventory").setExecutor(new InvCMD());
+    getCommand("position").setExecutor(new PositionCMD());
+    getCommand("positionlist").setExecutor(new PositionCMD());
+    getCommand("positiondelete").setExecutor(new PositionCMD());
+    getCommand("positionset").setExecutor(new PositionCMD());
   }
 
   private void initiateStructure(){
@@ -108,10 +109,11 @@ public class Main extends JavaPlugin
   
 
 
-//TODO: HELP
+//*TODO: HELP
+//TODO: /pos 0 0 0 nether
+//PlayerStats not manual
 //Bed Queue
 //Error System / Help System
 //Settings
 // * doDayNightCycle
-//Permissions
 //Posititions

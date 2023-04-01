@@ -5,6 +5,7 @@ groups:
     - backpack.open
     - color
     - deathcounter
+    - position
   mod:
     permissions:
     - permissions

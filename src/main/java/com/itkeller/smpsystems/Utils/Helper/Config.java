@@ -1,11 +1,11 @@
-package com.itkeller.smpsystems.Utils;
+package com.itkeller.smpsystems.Utils.Helper;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
+
 
 import org.bukkit.configuration.file.YamlConfiguration;
 

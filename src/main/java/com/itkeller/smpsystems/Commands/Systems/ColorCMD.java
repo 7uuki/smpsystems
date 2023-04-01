@@ -5,16 +5,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.bukkit.Material;
-import org.bukkit.Statistic;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Chat;
-import com.itkeller.smpsystems.Utils.Error;
-import com.itkeller.smpsystems.Utils.Scoreboard;
+import com.itkeller.smpsystems.Utils.Helper.Chat;
+import com.itkeller.smpsystems.Utils.Helper.Error;
+import com.itkeller.smpsystems.Utils.Helper.Scoreboard;
 import com.itkeller.smpsystems.Utils.MenuMaker.Icon;
 import com.itkeller.smpsystems.Utils.MenuMaker.Menu;
 import com.itkeller.smpsystems.Utils.Permissions.PermissionManager;

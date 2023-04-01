@@ -1,4 +1,4 @@
-package com.itkeller.smpsystems.Utils;
+package com.itkeller.smpsystems.Utils.Helper;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

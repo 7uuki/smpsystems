@@ -2,12 +2,15 @@ package com.itkeller.smpsystems.Commands.SimpleCMDs;
 
 import org.bukkit.Bukkit;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.chat.TextComponent;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.itkeller.Main;
+import com.itkeller.smpsystems.Listener.ChatListener;
 
 public class MsgCMD implements CommandExecutor{
 
@@ -26,12 +29,33 @@ public class MsgCMD implements CommandExecutor{
                 if(args[0].equalsIgnoreCase("CONSOLE")){
                     sender.sendMessage(ChatColor.LIGHT_PURPLE+ "to "+ChatColor.GRAY+"CONSOLE: §f"+String.valueOf(msg));
                     Bukkit.getConsoleSender().sendMessage(getPrefixFrom(sender)+String.valueOf(msg));
+                }else if(sender.getName().equals("CONSOLE")){
+                    Player receiver=Bukkit.getPlayer(args[0]);
+                    receiver.sendMessage(getPrefixFrom(sender)+String.valueOf(msg));
+                    Bukkit.getConsoleSender().sendMessage(getPrefixTo(receiver)+String.valueOf(msg));
                 }else{
                     for(Player receiver : Bukkit.getServer().getOnlinePlayers()) {
+                        Player player = (Player) sender;
                         if (ChatColor.stripColor(receiver.getName()).equalsIgnoreCase(args[0])) {
                             found=true;
-                            sender.sendMessage(getPrefixTo(receiver) +String.valueOf(msg));
-                            receiver.sendMessage(getPrefixFrom(sender) +String.valueOf(msg));
+                            TextComponent message_To=new TextComponent("§dto ");
+                            TextComponent player_To=new TextComponent(receiver.getName());
+                            player_To.setColor(Main.playerUtility.get(receiver).getChatColor());
+                            player_To.addExtra("§f: ");
+                            message_To.addExtra(player_To);
+
+                            TextComponent message_From=new TextComponent("§dfrom ");
+                            TextComponent player_From=new TextComponent(player.getName());
+                            player_From.setColor(Main.playerUtility.get(player).getChatColor());
+                            player_From.addExtra("§f: ");
+                            message_From.addExtra(player_From);
+
+                            TextComponent messageContent=ChatListener.format(msg.toString());
+                            message_To.addExtra(messageContent);
+                            message_From.addExtra(messageContent);
+
+                            sender.spigot().sendMessage(message_To);
+                            receiver.spigot().sendMessage(message_From);
                         }
                     }
                     if(!found){sender.sendMessage("player "+args[0]+" was not found");}

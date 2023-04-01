@@ -8,8 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.itkeller.smpsystems.Utils.Error;
-import com.itkeller.smpsystems.Utils.YML;
+import com.itkeller.smpsystems.Utils.Helper.Error;
+import com.itkeller.smpsystems.Utils.Helper.YML;
 import com.itkeller.smpsystems.Utils.MenuMaker.Icon;
 import com.itkeller.smpsystems.Utils.MenuMaker.Menu;
 import com.itkeller.smpsystems.Utils.MenuMaker.Icon.EmptyIcon;

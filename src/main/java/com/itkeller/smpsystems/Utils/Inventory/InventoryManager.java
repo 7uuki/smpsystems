@@ -12,8 +12,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Chat;
-import com.itkeller.smpsystems.Utils.YML;
+import com.itkeller.smpsystems.Utils.Helper.Chat;
+import com.itkeller.smpsystems.Utils.Helper.YML;
 
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;

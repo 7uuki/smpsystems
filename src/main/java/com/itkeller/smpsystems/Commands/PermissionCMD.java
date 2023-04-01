@@ -1,6 +1,5 @@
 package com.itkeller.smpsystems.Commands;
 
-import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -12,14 +11,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Error;
 import com.itkeller.smpsystems.Utils.Permissions.PermissionManager;
+import com.itkeller.smpsystems.Utils.Position.PositionManager;
+
 
 public class PermissionCMD implements CommandExecutor{
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        PermissionManager permissionManager=Main.permissionManager;
         //PLAYER UTILITY
         if (args[0].equalsIgnoreCase("player")){
             if(args[1].equalsIgnoreCase("print")){
@@ -60,7 +59,14 @@ public class PermissionCMD implements CommandExecutor{
             }
             
         }
-       
+        if (args[0].equalsIgnoreCase("test")){
+            
+            Player player=(Player) sender;
+            PositionManager positionManager=new PositionManager("positions", player.getUniqueId());
+            System.out.println(positionManager.exsists("test"));
+            System.out.println(positionManager.exsists("wow"));
+
+        }
         
         
         return false;

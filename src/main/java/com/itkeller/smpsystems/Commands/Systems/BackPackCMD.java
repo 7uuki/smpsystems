@@ -6,8 +6,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Error;
-import com.itkeller.smpsystems.Utils.YML;
+import com.itkeller.smpsystems.Utils.Helper.Error;
+import com.itkeller.smpsystems.Utils.Helper.YML;
 import com.itkeller.smpsystems.Utils.Permissions.PermissionManager;
 
 import net.md_5.bungee.api.ChatColor;

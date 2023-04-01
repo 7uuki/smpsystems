@@ -4,14 +4,11 @@ package com.itkeller.smpsystems.Listener;
 
 import java.util.Map;
 
-import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
-
 import com.itkeller.Main;
-import com.itkeller.smpsystems.Utils.Scoreboard;
+import com.itkeller.smpsystems.Utils.Helper.Scoreboard;
 
 import net.md_5.bungee.api.ChatColor;
 

@@ -1,6 +1,6 @@
 name: smpsystems
 main: com.itkeller.Main
-version: 0.0.1
+version: 1
 api-version: 1.15
 description: Collection of important SMP-Server features
 
@@ -20,3 +20,11 @@ commands:
   perm:
   inventory:
     aliases: [inv]
+  position:
+    aliases: [pos]
+  positionlist:
+    aliases: [poslist]
+  positionset:
+    aliases: [posset]
+  positiondelete:
+    aliases: [posdel,posdelete]
